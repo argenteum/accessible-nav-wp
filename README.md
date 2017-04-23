@@ -10,7 +10,7 @@ Use and adapt this responsive and accessible menu in your WordPress theme develo
 ## Using in WordPress
 1. Download [FontAwesome](http://fontawesome.io/) to your theme's directory
 2. Replace 'yourtheme' with your theme's text domain
-3. Add to your HTML
+3. Add this to your HTML where you want the menu to appear
 ```php
   <?php if (has_nav_menu('primary')) : ?>
   <div class="menu-container">     
