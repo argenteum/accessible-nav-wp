@@ -1,6 +1,5 @@
 /*** 
 An accessible menu for WordPress
-
 https://github.com/theme-smith/accessible-nav-wp
 Kirsten Smith (kirsten@themesmith.co.uk)
 Licensed GPL v.2 (http://www.gnu.org/licenses/gpl-2.0.html)
@@ -197,6 +196,7 @@ button.menu-button:focus {
     margin: 0;
     padding: 10px;
   }
+  .no-js .main-navigation ul ul,
   .main-navigation ul ul {
     position: absolute;
     display: none;
@@ -210,6 +210,7 @@ button.menu-button:focus {
     border: 1px solid #C0C0C0;
     z-index: 999;
   }
+  .no-js .main-navigation ul ul li,
   .main-navigation ul ul li {
     float: none;
     width: 220px;
@@ -218,6 +219,7 @@ button.menu-button:focus {
   .main-navigation ul .has-sub-menu > li {
     padding-right: 40px;
   }
+  .no-js .main-navigation ul ul ul,
   .main-navigation ul ul ul {
     top: -1px;
     left: 100%;
@@ -247,45 +249,5 @@ button.menu-button:focus {
   }
   .main-navigation ul li:hover > ul {
     display: block;
-  }
-  /* No Javascript */
-    .no-js .menu-container {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-  }
-  .no-js .site-header-menu {
-    margin-left: 0;
-  }
-  .no-js .main-navigation ul {
-    float: none;
-    display: block;
-  }
-  .no-js .main-navigation ul li {
-    float: none;
-    margin: 0;
-    padding: 0;
-  }
-  .no-js .main-navigation ul ul {
-    position: relative;
-    display: block;
-    top: auto;
-    left: auto;
-    margin-top: 2px;
-    margin-left: 25px;
-    padding: 0;
-    padding-bottom: 0;
-    padding-top: 0;
-    background-color: transparent;
-    border: 0;
-  }
-  .no-js .main-navigation ul ul li {
-    float: none;
-    width: auto;
-    padding: 0;
-  }
-  .no-js .main-navigation ul ul ul {
-    display: block;
-    margin-left: 25px;
   }
 }
