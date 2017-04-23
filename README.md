@@ -8,7 +8,7 @@ Use and adapt this responsive and accessible menu in your WordPress theme develo
 [View demo](https://theme-smith.github.io/accessible-nav-wp/)
 
 ## Using in WordPress
-1. Download [FontAwesome](http://fontawesome.io/) to your theme's directory
+1. Download [Font Awesome](http://fontawesome.io/) to your theme's directory
 2. Replace 'yourtheme' with your theme's text domain
 3. Add this to your HTML where you want the menu to appear
 ```php
@@ -40,16 +40,19 @@ Use and adapt this responsive and accessible menu in your WordPress theme develo
   * [Enqueue the script](https://developer.wordpress.org/reference/functions/wp_enqueue_script/) 
 
 ```php
-  wp_enqueue_script( 'yourtheme-script', get_template_directory_uri() . 'menu.js', array('jquery'), 'ver.', true );
+  wp_enqueue_script( 'yourtheme-script', get_template_directory_uri() . 'menu.js', array('jquery'), '1.0', true );
 ```
   * [Localize the script](https://codex.wordpress.org/Function_Reference/wp_localize_script)
-
-    This is optional (if your theme does not need to be [internationalized](https://developer.wordpress.org/themes/functionality/internationalization/)), but if you do not do this, you will need to uncomment line 21 in `menu.js`.
+   
 ```php
   wp_localize_script( 'yourtheme-script', 'screenReaderText', array(
 	   'expand'   => __( 'Expand child menu', 'yourtheme' ),
 	   'collapse' => __( 'Collapse child menu', 'yourtheme' ),
   ));
+```
+This is optional (if your theme does not need to be [internationalized](https://developer.wordpress.org/themes/functionality/internationalization/)), but if you do not do this, then you need to uncomment this line in `menu.js`:
+```javascript
+  var screenReaderText = {"expand":"Expand child menu","collapse":"Collapse child menu"};
 ```
   * [Enqueue Font Awesome stylesheet](https://developer.wordpress.org/reference/functions/wp_enqueue_style/)
 ```php
@@ -57,9 +60,9 @@ Use and adapt this responsive and accessible menu in your WordPress theme develo
 ```
 ## Using without WordPress
 1. [Download Font Awesome](http://fontawesome.io/get-started/) or use the [Font Awesome CDN](https://cdn.fontawesome.com/)
-2. Uncomment line 21 in `menu.js`
+2. Uncomment this line in `menu.js`
 ```javascript
-  screenReaderText = {"expand":"Expand child menu","collapse":"Collapse child menu"};
+  var screenReaderText = {"expand":"Expand child menu","collapse":"Collapse child menu"};
 ```
 3. Construct your HTML using this example
 ```html
