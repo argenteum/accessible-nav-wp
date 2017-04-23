@@ -1,0 +1,254 @@
+/*** 
+An accessible menu for WordPress
+
+https://github.com/theme-smith/accessible-nav-wp
+Kirsten Smith (kirsten@themesmith.co.uk)
+Licensed GPL v.2 (http://www.gnu.org/licenses/gpl-2.0.html)
+***/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.menu-container {
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  background-color: #F5F5F5;
+}
+
+.menu-container:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.site-header-menu {
+  display: none;
+  font-size: 1.5rem;
+}
+
+.main-navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-navigation ul li {
+  margin-right: 40px;
+}
+
+.main-navigation ul a,
+.main-navigation ul a:visited {
+  color: #333;
+  border-bottom: 3px solid transparent;
+  text-decoration: none;
+}
+
+.main-navigation ul a:hover {
+  border-bottom: 3px solid;
+}
+
+.main-navigation ul ul {
+  display: none;
+  margin-top: 0px;
+  margin-left: 25px;
+}
+
+.main-navigation ul ul ul {
+  display: none;
+  margin-left: 25px;
+}
+
+.no-js .site-header-menu,
+.site-header-menu.toggled-on {
+  display: block;
+}
+
+.site-header-menu.toggled-on {
+  margin-top: 10px;
+}
+
+.no-js .main-navigation ul,
+.main-navigation ul .sub-menu.toggled-on {
+  display: block;
+}
+
+button.dropdown-toggle,
+button.menu-button {
+  display: inline;
+  background-color: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  content: "";
+}
+
+button.dropdown-toggle {
+  position: absolute;
+  right: 10px;
+  margin-left: 10px;
+  padding: 2px;
+}
+
+.dropdown-toggle:after,
+.dropdown-toggle.toggled-on:after,
+.menu-button:before,
+.menu-button.toggled-on:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-family: "fontawesome";
+  font-size: 1em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-align: center;
+  text-decoration: inherit;
+  text-transform: none;
+}
+
+.dropdown-toggle:after,
+.dropdown-toggle.toggled-on:after {
+  font-size: 1.3rem;
+}
+
+.menu-button {
+  float: none;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+.menu-button:before,
+.menu-button.toggled-on:before {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.main-navigation a:focus,
+button.dropdown-toggle:focus,
+button.menu-button:focus {
+  outline: 1px dotted grey;
+  outline-offset: 2px;
+}
+
+.no-js .menu-button {
+  display: none;
+}
+
+.dropdown-toggle:after {
+  content: "\f067";
+}
+
+.dropdown-toggle.toggled-on:after {
+  content: "\f068";
+}
+
+.menu-button:before {
+  content: "\f0c9";
+}
+
+.menu-button.toggled-on:before {
+  content: "\f00d";
+}
+
+/* Screen readers */
+.screen-readers {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  word-break: normal !important;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* Desktop media query */
+@media only screen and (min-width: 992px) {
+  button.menu-button {
+    display: none;
+  }
+  .menu-container {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    border-bottom: 1px solid #C0C0C0;
+    border-top: 1px solid #C0C0C0;
+  }
+  .site-header-menu {
+    display: block;
+    margin-left: 10px;
+  }
+  .main-navigation ul {
+    position: relative;
+    float: left;
+  }
+  .main-navigation ul li {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 10px;
+  }
+  .no-js .main-navigation ul ul,
+  .main-navigation ul ul {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    margin-left: 0;
+    padding: 0;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color: #F5F5F5;
+    border: 1px solid #C0C0C0;
+    z-index: 999;
+  }
+  .no-js .main-navigation ul ul li,
+  .main-navigation ul ul li {
+    float: none;
+    width: 220px;
+    padding: 4px 10px;
+  }
+  .main-navigation ul .has-sub-menu > li {
+    padding-right: 40px;
+  }
+  .no-js .main-navigation ul ul ul,
+  .main-navigation ul ul ul {
+    top: -1px;
+    left: 100%;
+    margin-left: 0;
+    margin-top: -5px;
+  }
+  ul.sub-menu .dropdown-toggle {
+    position: absolute;
+    right: 10px;
+    top: 4px;
+  }
+  .main-navigation ul .dropdown-toggle:after {
+    content: "\f063";
+  }
+  .main-navigation ul ul .dropdown-toggle:after {
+    content: "\f061";
+  }
+  .main-navigation ul .dropdown-toggle.toggled-on:after {
+    content: "\f062";
+  }
+  .main-navigation ul ul .dropdown-toggle.toggled-on:after {
+    content: "\f060";
+  }
+  button.dropdown-toggle {
+    position: inherit;
+    right: auto;
+  }
+  .main-navigation ul li:hover > ul {
+    display: block;
+  }
+}
