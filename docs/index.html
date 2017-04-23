@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Accessible menu for WordPress</title>
+<script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.min.js'></script>
+<link rel='stylesheet' href='menu.css' type='text/css' media='all' />
+<link rel='stylesheet' href='font-awesome.css' type='text/css' media='all' />   
+<style>
+body {
+  margin: 20px;
+  font-family: Arial,sans-serif;     
+} 
+    
+.fa-github {
+  margin-right: 5px;  
+  color: #808080;
+}    
+</style>      
+</head>
+<body>
+     
+<header role="banner">
+  <p><i class="fa fa-github fa-3x" aria-hidden="true"></i><a href="https://github.com/theme-smith/accessible-nav-wp">
+      <span aria-hidden="true">/theme-smith/accessible-nav-wp</span><span class="screen-readers">View project on Github</span></a>
+  </p>    
+  <h1>An accessible menu for WordPress themes</h1>  
+  <!-- Menu -->      
+  <div class="menu-container">     
+  <button class="menu-button">Menu</button>
+       <div id="site-header-menu" class="site-header-menu">
+          <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+            <ul id="menu-main" class="primary-menu">
+                <li class="menu-item"><a href="/">Menu-item 1</a></li>
+                <li class="menu-item menu-item-has-children"><a href="/">Menu-item 2</a>
+                 <ul class="sub-menu">
+                      <li class="menu-item"><a href="/">Menu-item 2.1</a></li>
+                      <li class="menu-item menu-item-has-children"><a href="/">Menu-item 2.2</a>
+                          <ul class="sub-menu">
+                                  <li class="menu-item"><a href="/">Menu-item 2.2.1</a></li>
+                                  <li class="menu-item"><a href="/">Menu-item 2.2.2</a></li>
+                                  <li class="menu-item"><a href="/">Menu-item 2.2.3</a></li>
+                          </ul></li>
+                      <li class="menu-item"><a href="/">Menu-item 2.3</a></li>
+                 </ul></li>
+                <li class="menu-item menu-item-has-children"><a href="#">Menu-item 3</a>
+                  <ul class="sub-menu">
+                      <li class="menu-item menu-item-has-children"><a href="#">Menu-item 3.1</a>
+                          <ul class="sub-menu">
+                                  <li class="menu-item"><a href="/">Menu-item 3.1.1</a></li>
+                                  <li class="menu-item"><a href="/">Menu-item 3.1.2</a></li>
+                                  <li class="menu-item"><a href="/">Menu-item 3.1.3</a></li>
+                                  <li class="menu-item"><a href="/">Menu-item 3.1.4</a></li>
+                          </ul></li>
+                      <li class="menu-item menu-item-has-children"><a href="/">Menu-item 3.2</a>
+                          <ul class="sub-menu">
+                                  <li class="menu-item"><a href="/">Menu-item 3.2.1</a></li>
+                                  <li class="menu-item"><a href="/">Menu-item 3.2.2</a></li>
+                                  <li class="menu-item"><a href="/">Menu-item 3.2.3</a></li>
+                          </ul></li>
+                      <li class="menu-item menu-item-has-children"><a href="/">Menu-item 3.3</a>
+                          <ul class="sub-menu">
+                                  <li class="menu-item"><a href="/">Menu-item 3.3.1</a></li>
+                                  <li class="menu-item"><a href="/">Menu-item 3.3.2</a></li>
+                                  <li class="menu-item"><a href="/">Menu-item 3.3.3</a></li>
+                          </ul></li>
+                   </ul></li>
+               <li class="menu-item"><a href="/">Menu-item 4</a></li>
+            </ul>
+        </nav>
+      </div>
+  </div><!-- Menu ends -->
+</header>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var screenReaderText = {"expand":"Expand child menu","collapse":"Collapse child menu"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="menu.js"></script>      
+</body>
+</html>
