@@ -69,30 +69,30 @@ This is optional (if your theme does not need to be [internationalized](https://
   <div class="menu-container">     
     <button class="menu-button">Menu</button>
       <div id="site-header-menu" class="site-header-menu">
-          <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
-            <ul id="menu-main" class="primary-menu">
-                <li class="menu-item"><a href="/">Menu-item 1</a></li>
-                <li class="menu-item menu-item-has-children"><a href="/">Menu-item 2</a>
-                 <ul class="sub-menu">
-                      <li class="menu-item"><a href="/">Menu-item 2.1</a></li>
-                      <li class="menu-item menu-item-has-children"><a href="/">Menu-item 2.2</a>
-                          <ul class="sub-menu">
-                                  <li class="menu-item"><a href="/">Menu-item 2.2.1</a></li>
-                                  <li class="menu-item"><a href="/">Menu-item 2.2.2</a></li>
-                                  <li class="menu-item"><a href="/">Menu-item 2.2.3</a></li>
-                          </ul></li>
-                      <li class="menu-item"><a href="/">Menu-item 2.3</a></li>
-                 </ul></li>
-                <li class="menu-item menu-item-has-children"><a href="#">Menu-item 3</a>
-                  <ul class="sub-menu">
-                      <li class="menu-item menu-item-has-children"><a href="#">Menu-item 3.1</a>
-                          <ul class="sub-menu">
-                                  <li class="menu-item"><a href="/">Menu-item 3.1.1</a></li>
-                                  <li class="menu-item"><a href="/">Menu-item 3.1.2</a></li>
-                                  <li class="menu-item"><a href="/">Menu-item 3.1.3</a></li>
-                                  <li class="menu-item"><a href="/">Menu-item 3.1.4</a></li>
-                          </ul></li>
+        <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+          <ul id="menu-main" class="primary-menu">
+             <li class="menu-item"><a href="/">Menu-item 1</a></li>
+             <li class="menu-item menu-item-has-children"><a href="/">Menu-item 2</a>
+               <ul class="sub-menu">
+                 <li class="menu-item"><a href="/">Menu-item 2.1</a></li>
+                 <li class="menu-item menu-item-has-children"><a href="/">Menu-item 2.2</a>
+                   <ul class="sub-menu">
+                     <li class="menu-item"><a href="/">Menu-item 2.2.1</a></li>
+                     <li class="menu-item"><a href="/">Menu-item 2.2.2</a></li>
+                     <li class="menu-item"><a href="/">Menu-item 2.2.3</a></li>
                    </ul></li>
+                 <li class="menu-item"><a href="/">Menu-item 2.3</a></li>
+                </ul></li>
+              <li class="menu-item menu-item-has-children"><a href="#">Menu-item 3</a>
+                <ul class="sub-menu">
+                  <li class="menu-item menu-item-has-children"><a href="#">Menu-item 3.1</a>
+                    <ul class="sub-menu">
+                      <li class="menu-item"><a href="/">Menu-item 3.1.1</a></li>
+                      <li class="menu-item"><a href="/">Menu-item 3.1.2</a></li>
+                      <li class="menu-item"><a href="/">Menu-item 3.1.3</a></li>
+                      <li class="menu-item"><a href="/">Menu-item 3.1.4</a></li>
+                    </ul></li>
+                 </ul></li>
                <li class="menu-item"><a href="/">Menu-item 4</a></li>
             </ul>
           </nav>
