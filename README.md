@@ -99,3 +99,7 @@ This is optional (if your theme does not need to be [internationalized](https://
        </div>
      </div>
 ```
+## Browsers
+Browser testing courtesy of [BrowserStack](https://www.browserstack.com/)
+
+![BrowserStack logo](https://raw.githubusercontent.com/theme-smith/accessible-nav-wp/master/docs/browserstack-logo.png "BrowserStack supports Open Source")
