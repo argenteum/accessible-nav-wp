@@ -5,7 +5,7 @@ Use and adapt this responsive and accessible menu in your WordPress theme develo
 * Keyboard navigation using `tab`, `space`, `enter`, and arrow keys
 * All elements have ARIA names, roles and attributes
 
-[View demo](https://theme-smith.github.io/accessible-nav-wp/)
+[View demo](https://silver-leaf.github.io/accessible-nav-wp/)
 
 ## Using in WordPress
 1. Download [Font Awesome](http://fontawesome.io/) to your theme's directory
