@@ -1,5 +1,5 @@
 # An accessible menu for WordPress themes
-Use and adapt this responsive and accessible menu in your WordPress theme development. 
+Use and adapt this responsive and accessible menu in your WordPress theme development.
 
 ## Features
 * Keyboard navigation using `tab`, `space`, `enter`, and arrow keys
@@ -8,9 +8,9 @@ Use and adapt this responsive and accessible menu in your WordPress theme develo
 [View demo](https://argenteum.github.io/accessible-nav-wp/)
 
 ## Using in WordPress
-1. Download [Font Awesome](http://fontawesome.io/) to your theme's directory
+
+1. Add this to your HTML where you want the menu to appear
 2. Replace 'yourtheme' with your theme's text domain
-3. Add this to your HTML where you want the menu to appear
 ```php
   <?php if (has_nav_menu('primary')) : ?>
   <div class="menu-container">     
@@ -28,7 +28,7 @@ Use and adapt this responsive and accessible menu in your WordPress theme develo
    </div>
   <?php endif; ?>
 ```
-4. Do the following in your theme's `functions.php`
+3. Do the following in your theme's `functions.php`
   * [Register the menu](https://codex.wordpress.org/Navigation_Menus)
 
 ```php
@@ -37,13 +37,13 @@ Use and adapt this responsive and accessible menu in your WordPress theme develo
   }
   add_action( 'init', 'register_my_menu' );
 ```
-  * [Enqueue the script](https://developer.wordpress.org/reference/functions/wp_enqueue_script/) 
+  * [Enqueue the script](https://developer.wordpress.org/reference/functions/wp_enqueue_script/)
 
 ```php
   wp_enqueue_script( 'yourtheme-script', get_template_directory_uri() . 'menu.js', array('jquery'), '1.0', true );
 ```
   * [Localize the script](https://codex.wordpress.org/Function_Reference/wp_localize_script)
-   
+
 ```php
   wp_localize_script( 'yourtheme-script', 'screenReaderText', array(
 	   'expand'   => __( 'Expand child menu', 'yourtheme' ),
@@ -56,15 +56,14 @@ This is optional (if your theme does not need to be [internationalized](https://
 ```
   * [Enqueue Font Awesome stylesheet](https://developer.wordpress.org/reference/functions/wp_enqueue_style/)
 ```php
-  wp_enqueue_style('font-awesome', get_template_directory() . '/font-awesome/font-awesome.css'); 
+  wp_enqueue_style('font-awesome', get_template_directory() . '/font-awesome/font-awesome.css');
 ```
 ## Using without WordPress
-1. [Download Font Awesome](http://fontawesome.io/get-started/) or use the [Font Awesome CDN](https://cdn.fontawesome.com/)
-2. Uncomment this line in `menu.js`
+1. Uncomment this line in `menu.js`
 ```javascript
   var screenReaderText = {"expand":"Expand child menu","collapse":"Collapse child menu"};
 ```
-3. Construct your HTML using this example
+2. Construct your HTML using this example
 ```html
   <div class="menu-container">     
     <button class="menu-button">Menu</button>
@@ -102,4 +101,4 @@ This is optional (if your theme does not need to be [internationalized](https://
 ## Browsers
 Browser testing courtesy of [BrowserStack](https://www.browserstack.com/)
 
-![BrowserStack logo](https://raw.githubusercontent.com/theme-smith/accessible-nav-wp/master/docs/browserstack-logo.png "BrowserStack supports Open Source")
+![BrowserStack logo](https://raw.githubusercontent.com/argenteum/accessible-nav-wp/master/docs/browserstack-logo.png "BrowserStack supports Open Source")

@@ -1,9 +1,14 @@
-/*** 
+/***
+
 An accessible menu for WordPress
-https://github.com/theme-smith/accessible-nav-wp
-Kirsten Smith (kirsten@themesmith.co.uk)
+https://github.com/argenteum/accessible-nav-wp
+
 Licensed GPL v.2 (http://www.gnu.org/licenses/gpl-2.0.html)
+
 ***/
+
+@charset "UTF-8";
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -16,7 +21,7 @@ Licensed GPL v.2 (http://www.gnu.org/licenses/gpl-2.0.html)
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 .menu-container:after {
@@ -95,25 +100,6 @@ button.dropdown-toggle {
 }
 
 .dropdown-toggle:after,
-.dropdown-toggle.toggled-on:after,
-.menu-button:before,
-.menu-button.toggled-on:before {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-family: "fontawesome";
-  font-size: 1em;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  line-height: 1;
-  speak: none;
-  text-align: center;
-  text-decoration: inherit;
-  text-transform: none;
-}
-
-.dropdown-toggle:after,
 .dropdown-toggle.toggled-on:after {
   font-size: 1.3rem;
 }
@@ -126,7 +112,6 @@ button.dropdown-toggle {
 
 .menu-button:before,
 .menu-button.toggled-on:before {
-  width: 20px;
   margin-right: 5px;
 }
 
@@ -141,20 +126,32 @@ button.menu-button:focus {
   display: none;
 }
 
+/* Plus symbol to expand sub-menu on mobile */
 .dropdown-toggle:after {
-  content: "\f067";
+  content: "\002B";
 }
 
+/* Minus symbol to collapse sub-menu on mobile */
 .dropdown-toggle.toggled-on:after {
-  content: "\f068";
+  content: "\2212";
 }
 
+/* 'Hamburger' or bars to expand menu on mobile*/
 .menu-button:before {
-  content: "\f0c9";
+  content: "\2261";
 }
 
+/* Times (x) to collapse menu on mobile*/
 .menu-button.toggled-on:before {
-  content: "\f00d";
+  content: "\2573";
+  font-size: 70%;
+}
+
+.dropdown-toggle:after,
+.dropdown-toggle.toggled-on:after,
+.menu-button:before,
+.menu-button.toggled-on:before {
+  font-weight: bold;
 }
 
 /* Screen readers */
@@ -179,8 +176,8 @@ button.menu-button:focus {
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 0;
-    border-bottom: 1px solid #C0C0C0;
-    border-top: 1px solid #C0C0C0;
+    border-bottom: 1px solid #c0c0c0;
+    border-top: 1px solid #c0c0c0;
   }
   .site-header-menu {
     display: block;
@@ -206,8 +203,8 @@ button.menu-button:focus {
     padding: 0;
     padding-bottom: 5px;
     padding-top: 5px;
-    background-color: #F5F5F5;
-    border: 1px solid #C0C0C0;
+    background-color: #f5f5f5;
+    border: 1px solid #c0c0c0;
     z-index: 999;
   }
   .no-js .main-navigation ul ul li,
@@ -231,18 +228,34 @@ button.menu-button:focus {
     right: 10px;
     top: 4px;
   }
+
+  /* Arrow down */
   .main-navigation ul .dropdown-toggle:after {
-    content: "\f063";
+    content: "\2193";
   }
+
+  /* Arrow right */
   .main-navigation ul ul .dropdown-toggle:after {
-    content: "\f061";
+    content: "\2192";
   }
+
+  /* Arrow up */
   .main-navigation ul .dropdown-toggle.toggled-on:after {
-    content: "\f062";
+    content: "\2191";
   }
+
+  /* Arrow left */
   .main-navigation ul ul .dropdown-toggle.toggled-on:after {
-    content: "\f060";
+    content: "\2190";
   }
+
+  .main-navigation ul .dropdown-toggle:after,
+  .main-navigation ul ul .dropdown-toggle:after,
+  .main-navigation ul .dropdown-toggle.toggled-on:after,
+  .main-navigation ul ul .dropdown-toggle.toggled-on:after {
+    font-weight: bold;
+  }
+
   button.dropdown-toggle {
     position: inherit;
     right: auto;
